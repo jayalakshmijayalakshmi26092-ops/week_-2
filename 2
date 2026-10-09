@@ -1,0 +1,120 @@
+PerformdatapreprocessingtasksandDemonstrateperformingassociationruleminingon data sets
+DataPreprocessinginWeka
+•	ApplyingDiscretizationFilter
+•	Discretizationconvertsnumericattributesintonominalranges.
+
+•	ThishelpsalgorithmslikeAprioriwhichrequirecategoricalinputs
+
+
+
+•	Wekaprovidessupervisedandunsuperviseddiscretizationfilters.
+ 
+ 
+
+•	ThefiltercanbeappliedfromthePreprocesspanel.
+
+•	Discretizationimprovesinterpretabilityinassociationrules.
+
+•	ApplyingResampleFilter
+•	Resamplefilterisusedforrandomsamplingofinstances.
+ 
+ 
+•	Itcanbeappliedwithorwithoutreplacement.
+
+•	Ithelpsinbalancingdatasetswithclassimbalance.
+
+•	Userscanspecifythepercentageofdatatoretain.
+•	Resamplingimprovesfairnessinclassificationandrulemining.
+ 
+ 
+•	OtherFiltersinWeka
+•	WekaprovidesNormalizeandStandardizefiltersforscalingdata.
+
+•	Attributeremovalfilterallowsremovingunwantedfields.
+•	Replacemissingvaluesfilterisusedfordatacleaning
+
+
+
+•	NominaltoBinaryfilterconvertsnominalattributesintobinaryform.
+ 
+ 
+•	Thesefiltersenhancethequalityandusabilityofdata.
+
+AssociationRuleMininginWeka
+•	RunningApriorionWeatherDataset
+•	Openweather.nominaldatasetinWeka.
+
+•	SelectAssociate→Apriorialgorithm.
+ 
+ 
+•	Runwithdefaultsupport(0.1)andconfidence(0.9).
+
+•	Apriorigeneratesruleslike“IfOutlook=SunnythenPlay=No.”
+•	Rulesrepresenthiddenrelationshipsamongattributes.
+
+
+
+•	RunningApriorionIrisDataset
+ 
+•	Openiris.arffdatasetinPreprocesspanel.
+
+•	Applydiscretizationfiltertoconvertnumericattributes.
+
+•	RunApriorialgorithmwithminimumsupport0.2andconfidence0.8.
+
+•	Generatedrulesincludeattribute-valuerelationsforflowertypes.
+ 
+ 
+•	DiscretizationhelpsAprioriproducemeaningfulcategoricalrules
+2.	RunningApriorionGlassDataset
+•	Loadglass.arffdatasetintoWeka.
+
+•	SinceGlasshasmanynumericattributes,applydiscretization.
+
+•	RunAprioriwithlowersupport(0.05)duetolargeattributeset.
+ 
+ 
+•	Generatedrulesmayhighlightchemicalcompositionslinkedtoglasstype.
+
+•	Insightshelpidentifykeyfeaturesthatdifferentiateglasscategories.
+
+EffectofDiscretizationinRuleGeneration
+•	WithoutDiscretization
+ 
+•	Numericattributesmakerulegenerationdifficult.
+
+
+•	Apriorimayfailtoproduceusefulrules.
+•	Continuousvaluesreducechancesoffrequentpatterns.
+
+•	Rulesmaybeveryspecificwithlittlegeneralization.
+•	Insightsarelimitedandhardertointerpret.
+ 
+ 
+•	With Discretization
+•	Numericattributesareconvertedintoranges(bins).
+
+•	Frequentpatternsbecomeeasiertodetect.
+
+•	Rulesbecomesimplerandmoreinterpretable.
+•	Supportandconfidenceofrulesimprove.
+ 
+ 
+•	DiscretizationclearlyenhancesAprioriperformance.
+InsightsandObservations
+•	Preprocessingimprovesthequalityofdataforminingtasks.
+
+•	DiscretizationsignificantlyhelpsinApriorirulegeneration.
+
+•	Weatherdatasetgivessimpleandinterpretablerules.
+ 
+ 
+•	IrisandGlassdatasetsgeneratecomplexrulesafterdiscretization.
+
+•	Overall,Aprioriwithdiscretizedattributesproducesmoremeaningfulinsights.
+BeforeDecritization:
+
+AfterDecritization:
+ 
+ 
+
